@@ -20,9 +20,8 @@ public class PositionType {
 
     // TODO: Add a custom toString() method that returns the data stored in 'value'.
 
-    public String toString(String value){
-        this.value = value;
-        return value;
+    public String toString(){
+        return this.value;
     }
 
     // TODO: Add custom equals and hashCode methods. Consider two PositionType objects "equal" when
