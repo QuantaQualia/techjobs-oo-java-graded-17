@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59ff47a6-ece6-4e2e-b777-6247aa1f282e" name="Changes" comment="Fixed dumb mistakes like putting whole blocks of code in the wrong damn file.">
+    <list default="true" id="59ff47a6-ece6-4e2e-b777-6247aa1f282e" name="Changes" comment="Completed up to Task 5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/PositionType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/PositionType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/Job.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/Job.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/launchcode/techjobs/oo/JobTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/launchcode/techjobs/oo/JobTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,8 +73,8 @@
       <recent name="org.launchcode.techjobs.oo" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'org.launchcode.techjobs.oo'">
-    <configuration name="JobTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.JobTest.testToStringHandlesEmptyField">
+    <configuration name="JobTest.testToStringContainsCorrectLabelsAndData" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -89,7 +87,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.launchcode.techjobs.oo.JobTest&quot;" />
+            <option value="&quot;org.launchcode.techjobs.oo.JobTest.testToStringContainsCorrectLabelsAndData&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -100,7 +98,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="JobTest.testJobConstructorSetsAllFields" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="JobTest.testToStringHandlesEmptyField" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -113,7 +111,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.launchcode.techjobs.oo.JobTest.testJobConstructorSetsAllFields&quot;" />
+            <option value="&quot;org.launchcode.techjobs.oo.JobTest.testToStringHandlesEmptyField&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -124,7 +122,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="JobTest.testJobsForEquality" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="JobTest.testToStringStartsAndEndsWithNewLine" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -137,7 +135,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.launchcode.techjobs.oo.JobTest.testJobsForEquality&quot;" />
+            <option value="&quot;org.launchcode.techjobs.oo.JobTest.testToStringStartsAndEndsWithNewLine&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -207,20 +205,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.JobTest" />
-      <item itemvalue="Gradle.JobTest.testJobConstructorSetsAllFields" />
-      <item itemvalue="Gradle.JobTest.testJobsForEquality" />
+      <item itemvalue="Gradle.JobTest.testToStringContainsCorrectLabelsAndData" />
+      <item itemvalue="Gradle.JobTest.testToStringHandlesEmptyField" />
+      <item itemvalue="Gradle.JobTest.testToStringStartsAndEndsWithNewLine" />
       <item itemvalue="Gradle.TestTaskTwo.testPositionTypeToStringMethod" />
       <item itemvalue="Gradle.Tests in 'org.launchcode.techjobs.oo'" />
       <item itemvalue="JUnit.JobTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.JobTest.testToStringHandlesEmptyField" />
+        <item itemvalue="Gradle.JobTest.testToStringContainsCorrectLabelsAndData" />
+        <item itemvalue="Gradle.JobTest.testToStringStartsAndEndsWithNewLine" />
         <item itemvalue="Gradle.Tests in 'org.launchcode.techjobs.oo'" />
         <item itemvalue="Gradle.TestTaskTwo.testPositionTypeToStringMethod" />
-        <item itemvalue="Gradle.JobTest" />
-        <item itemvalue="Gradle.JobTest.testJobConstructorSetsAllFields" />
-        <item itemvalue="Gradle.JobTest.testJobsForEquality" />
       </list>
     </recent_temporary>
   </component>
@@ -249,12 +247,21 @@
       <option name="project" value="LOCAL" />
       <updated>1699599392997</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Completed up to Task 5">
+      <option name="closed" value="true" />
+      <created>1699657066464</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1699657066464</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
     <MESSAGE value="Fixed dumb mistakes like putting whole blocks of code in the wrong damn file." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed dumb mistakes like putting whole blocks of code in the wrong damn file." />
+    <MESSAGE value="Completed up to Task 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed up to Task 5" />
   </component>
 </project>

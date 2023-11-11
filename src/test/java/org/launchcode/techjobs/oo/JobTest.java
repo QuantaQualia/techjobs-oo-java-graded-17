@@ -41,7 +41,48 @@ public class JobTest {
 
     @Test
     public void testToStringStartsAndEndsWithNewLine(){
+        Job aJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         String newLine = System.lineSeparator();
+        String start = String.valueOf(aJob.toString().charAt(0));
+        String end = String.valueOf(aJob.toString().charAt(aJob.toString().length() - 1));
+        assertEquals(newLine, start);
+        assertEquals(newLine, end);
+    }
+
+    @Test
+   public void testToStringContainsCorrectLabelsAndData() {
+        String newLine = System.lineSeparator();
+        Job aJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+
+        String actual = aJob.toString();
+        String expected = newLine +
+                "ID: " + aJob.getId() + newLine +
+                "Name: " + aJob.getName() + newLine +
+                "Employer: " + aJob.getEmployer() + newLine +
+                "Location: " + aJob.getLocation() + newLine +
+                "Position Type: " + aJob.getPositionType() + newLine +
+                "Core Competency: " + aJob.getCoreCompetency() + newLine;
+
+        assertEquals(actual, expected);
+    }
+
+    @Test
+    public void testToStringHandlesEmptyField() {
+        String newLine = System.lineSeparator();
+        Job emptyJob = new Job();
+        Job emptyJobFields = new Job("", null, null, null, null);
+
+        String actual = emptyJob.toString();
+        String expected = newLine +
+                "ID: " + emptyJobFields.getId() + newLine +
+                "Name: " + "Data not available" + newLine +
+                "Employer: " + "Data not available" + newLine +
+                "Location: " + "Data not available" + newLine +
+                "Position Type: " + "Data not available" + newLine +
+                "Core Competency: " + "Data not available" + newLine;
+
+        assertEquals(actual, "OOPS! This job does not seem to exist.");
+        assertEquals(emptyJobFields, expected);
     }
 }
 
