@@ -4,11 +4,6 @@ import org.junit.Test;
 import static org.testng.Assert.*;
 
 public class JobTest {
-    String name = "Product tester";
-    Employer employer = new Employer("ACME");
-    Location location = new Location("Desert");
-
-    Job myJob = new Job();
     @Test
     public void testSettingJobId(){
         Job job1 = new Job();
@@ -81,7 +76,7 @@ public class JobTest {
                 "Position Type: " + "Data not available" + newLine +
                 "Core Competency: " + "Data not available" + newLine;
 
-        assertEquals(actual, "OOPS! This job does not seem to exist.");
+        assertEquals(actual, newLine + "OOPS! This job does not seem to exist." + newLine);
         assertEquals(emptyJobFields, expected);
     }
 }

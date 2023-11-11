@@ -36,15 +36,15 @@ public class Job {
         String newLine = System.lineSeparator();
         String unavailable = "Data not available";
         String nonexistent = "OOPS! This job does not seem to exist.";
-        if (name == null && employer == null && location == null && positionType == null && coreCompetency == null) return newLine + nonexistent;
+        if (name == null && employer == null && location == null && positionType == null && coreCompetency == null) return newLine + nonexistent + newLine;
 
         return newLine +
                 "ID: " + (id <= 0 ? unavailable : id) + newLine +
                 "Name: " + (name == null || name.isEmpty() ? unavailable : name) + newLine +
-                "Employer: " + (employer == null ? unavailable : name) +newLine +
-                "Location: " + (location == null ? unavailable : location) + newLine +
-                "Position Type: " + (positionType == null ? unavailable : positionType) + newLine +
-                "Core Competency: " + (coreCompetency == null ? unavailable : coreCompetency) + newLine;
+                "Employer: " + (employer == null  || employer.getValue().isEmpty()? unavailable : employer) +newLine +
+                "Location: " + (location == null || location.getValue().isEmpty() ? unavailable : location) + newLine +
+                "Position Type: " + (positionType == null || positionType.getValue().isEmpty()? unavailable : positionType) + newLine +
+                "Core Competency: " + (coreCompetency == null || coreCompetency.getValue().isEmpty()? unavailable : coreCompetency) + newLine;
 
     }
 
